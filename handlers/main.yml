@@ -42,7 +42,7 @@
   become: true
   command: grub-mkconfig -o "{{ grub_cfg.stat.path }}"
   notify: fix permissions after generate new grub config handler
-ignore_errors: true
+  ignore_errors: true
 
 
 - name: fix permissions after generate new grub config handler
